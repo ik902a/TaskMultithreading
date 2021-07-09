@@ -9,7 +9,7 @@ import by.epam.learn.exception.LogisticBaseException;
 
 public class Truck extends Thread {
 	public static Logger log = LogManager.getLogger();
-	private static final int UNLOAD_TIME = 400;
+	private static final int UNLOAD_TIME = 200;
 	private int numberTruck;
 	private TypeGoods type;
 	private int arrival;

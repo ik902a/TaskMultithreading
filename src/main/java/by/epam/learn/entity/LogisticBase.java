@@ -25,20 +25,20 @@ public class LogisticBase {
 		}
 	}
 	
-    public static LogisticBase getLogisticBase() {
-        if (logisticBase == null) {
-            try {
-                lock.lock();
-                if (logisticBase == null) {
-                	logisticBase = new LogisticBase();
-                    log.info("Logistic Base was created");
-                }
-            } finally {
-                lock.unlock();
-            }
-        }
-        return logisticBase;
-    }
+	public static LogisticBase getLogisticBase() {
+		if (logisticBase == null) {
+			try {
+				lock.lock();
+				if (logisticBase == null) {
+					logisticBase = new LogisticBase();
+					log.info("Logistic Base was created");
+				}
+			} finally {
+				lock.unlock();
+			}
+		}
+		return logisticBase;
+	}
     
 	public Ramp getRamp(Truck truck) throws LogisticBaseException {
 		try {
@@ -51,7 +51,7 @@ public class LogisticBase {
 					log.info("There is a " + truck.toString() + " on the ramp number " + ramp.getId());
 					return ramp;
 				}
-			}	
+			}
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
 			throw new LogisticBaseException("Current thread " + Thread.currentThread().getName() + " was interrupted");

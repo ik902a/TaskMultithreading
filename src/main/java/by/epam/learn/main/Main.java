@@ -31,8 +31,5 @@ public class Main {
 		} catch (LogisticBaseException e) {
 			log.error("Exception in Main " + e.getMessage());
 		}
-	
-
 	}
-
 }

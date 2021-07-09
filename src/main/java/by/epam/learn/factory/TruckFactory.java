@@ -21,11 +21,8 @@ public class TruckFactory {
 		int numberTruck = Integer.valueOf(numberTruckData);
 		TypeGoods type = TypeGoods.valueOf(typeData.toUpperCase());
 		int arrival = Integer.valueOf(arrivalData);
-		
 		Truck truck = new Truck(numberTruck, type, arrival);
-
 		log.info("Truck number " + numberTruck + " was created");
 		return truck;
 	}
-
 }
